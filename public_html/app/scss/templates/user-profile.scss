@@ -1,0 +1,48 @@
+.profile {
+    position: relative;
+    align-items: start;
+    gap: 1.5rem;
+
+    @media (min-width: 992px) {
+        grid-template-columns: 216px 1fr;
+    }
+}
+
+.profile .sidebar-menu {
+    @media (min-width: 992px) {
+        position: sticky;
+        top: 5rem;
+    }
+}
+
+
+.profile-orders-item {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.profile-orders-item-main > div + div {
+    margin-top: 0.25rem;
+}
+
+.profile-orders-item-products {
+    font-size: 0.875rem;
+}
+.profile-orders-item-products li + li {
+    margin-top: 0.5rem;
+}
+
+
+.sidebar-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-menu .is-active a {
+    font-weight: var(--font-weight-bolder);
+    color: var(--color-primary);
+    border: none;
+}
+
+.sidebar-menu a:hover {
+    color: var(--color-primary);
+}

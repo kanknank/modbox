@@ -1,0 +1,104 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      'a83dda08b9756399328fb168933d3ca4' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            '1c037df0a694e05baa4721b448c89189' => 
+            array (
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnWebPageInit","priority":0,"propertyset":0}',
+              'guid' => 'aca075b6e17d82bbb138f756468058c8',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnWebPageInit',
+              ),
+              'signature' => 'f544312a6cd658fd5e5ca19b2cc3bd90',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => true,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"Counters","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/** @var modX $modx *\\/\\nif($modx->event->name == \'OnWebPageInit\') {\\n    $modx->addPackage(\'counters\', MODX_CORE_PATH . \'components\\/counters\\/model\\/\');\\n    $counters = $modx->getCollection(\'CountersItem\');\\n    foreach($counters as $counter) {\\n        $counter = $counter->toArray();\\n        if($counter[\'active\'] && ($counter[\'all_context\'] || $modx->context->key == $counter[\'context\'])) {\\n            $code = $counter[\'content\'];\\n            if($counter[\'position\'] == \'Head\') {\\n                $modx->regClientStartupHTMLBlock($code);\\n            } else {\\n                $modx->regClientHTMLBlock($code);\\n            }\\n        }\\n    }\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/counters\\/elements\\/plugins\\/counters.php","content":"\\/** @var modX $modx *\\/\\nif($modx->event->name == \'OnWebPageInit\') {\\n    $modx->addPackage(\'counters\', MODX_CORE_PATH . \'components\\/counters\\/model\\/\');\\n    $counters = $modx->getCollection(\'CountersItem\');\\n    foreach($counters as $counter) {\\n        $counter = $counter->toArray();\\n        if($counter[\'active\'] && ($counter[\'all_context\'] || $modx->context->key == $counter[\'context\'])) {\\n            $code = $counter[\'content\'];\\n            if($counter[\'position\'] == \'Head\') {\\n                $modx->regClientStartupHTMLBlock($code);\\n            } else {\\n                $modx->regClientHTMLBlock($code);\\n            }\\n        }\\n    }\\n}","file":"counters","events":{"OnWebPageInit":[]}}',
+        'guid' => 'b81e2cedc338143ab4b39f6f759d7c01',
+        'native_key' => NULL,
+        'signature' => '72c3fb17a45d2d6b235a8ea7965dc8b8',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => true,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'counters',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"counters-1.0.4-pl\\/modCategory\\/9bd834f02e5215039e01b62936b979ed\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"counters"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"counters-1.0.4-pl\\/modCategory\\/9bd834f02e5215039e01b62936b979ed\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"counters"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"counters-1.0.4-pl\\/modCategory\\/9bd834f02e5215039e01b62936b979ed.tables.resolver","type":"php","name":"tables"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd4a96e7f3f46e4dc30c430a1c3867c43',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '9bd834f02e5215039e01b62936b979ed',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"Counters","rank":0}',
+);

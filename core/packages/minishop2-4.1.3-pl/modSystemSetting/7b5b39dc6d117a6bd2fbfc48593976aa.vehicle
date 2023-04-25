@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd3209432937a153253c3a5b323c5b2f0',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '7b5b39dc6d117a6bd2fbfc48593976aa',
+  'native_key' => 'ms2_order_js_class_path',
+  'object' => '{"key":"ms2_order_js_class_path","value":"[[+jsUrl]]web\\/vanilajs\\/modules\\/msorder.class.js","xtype":"textfield","namespace":"minishop2","area":"ms2_frontend","editedon":"2023-03-13 22:03:41"}',
+);

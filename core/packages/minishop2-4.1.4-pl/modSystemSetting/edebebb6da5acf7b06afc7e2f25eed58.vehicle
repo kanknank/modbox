@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '62c2ef2d0b72007203ac0eacdd0073df',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'edebebb6da5acf7b06afc7e2f25eed58',
+  'native_key' => 'ms2_register_frontend',
+  'object' => '{"key":"ms2_register_frontend","value":true,"xtype":"combo-boolean","namespace":"minishop2","area":"ms2_frontend","editedon":"2023-03-31 10:37:14"}',
+);

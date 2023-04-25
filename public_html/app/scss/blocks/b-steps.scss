@@ -1,0 +1,27 @@
+/* Этапы работы */
+/* Блок не свёрстан */
+
+.b-steps__items {
+    --gap-y: 1.5rem;
+}
+
+.b-steps__item {
+    text-align: center;
+}
+
+.b-steps__item-image {
+    color: var(--color-primary);
+
+    img, svg {
+        width: auto;
+        height: 90px;
+        @media (min-width: 576px) {
+            height: 120px;
+        }
+    }
+}
+
+.b-steps__item-title {
+    margin: 1rem auto 0;
+    max-width: 260px;
+}

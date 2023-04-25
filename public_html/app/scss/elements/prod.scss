@@ -1,0 +1,75 @@
+.prod-price-old {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    color: var(--color-text-muted);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -0.25em;
+        right: -0.25em;
+        height: 1px;
+        background-color: var(--color-danger);
+        transform: rotate(-7deg);
+    }
+}
+
+.prod-qty {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    user-select: none;
+
+    > span {
+        display: grid;
+        place-items: center;
+        padding: 0 0.5rem;
+    }
+
+    > button {
+        padding: 0;
+        min-width: 2.5rem;
+        min-height: 2.5rem;
+    }
+}
+
+.prod-badges {
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    z-index: 10;
+    display: grid;
+    gap: 0.25rem;
+    pointer-events: none;
+
+    &__item {
+        display: grid;
+        place-items: center;
+        padding: 0.35em 1em 0.2em;
+        background: var(--color-text-muted);
+        border-radius: var(--border-radius);
+        color: #fff;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: var(--font-weight-bolder);
+        line-height: 1;
+        
+        & + .prod-badge {
+            margin-top: 0.25rem;
+        }
+
+        &._action {
+            background-color: var(--color-danger);
+        }
+
+        &._hit {
+            background-color: #F5AF19;
+        }
+
+        &._new {
+            background-color: var(--color-success);
+        }
+    }
+}

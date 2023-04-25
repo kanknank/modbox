@@ -1,0 +1,87 @@
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    padding-right: var(--grid-gap);
+    padding-left: var(--grid-gap);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@each $breakpoint, $width, $maw in $breakpoints {
+    @media (min-width: $width) {
+        .container {
+            --container-width: calc(#{$maw} + var(--grid-gap) * 2);
+        }
+    }
+}
+
+
+.grid {
+    @extend %grid;
+    --gap-x: var(--grid-gap);
+    --gap-y: var(--grid-gap);
+    --col: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(var(--gap-y) * -1) calc(var(--gap-x) / -2) 0;
+    & > * {
+        width: calc(100% / var(--columns) * var(--col) - var(--gap-x));
+        margin: var(--gap-y) calc(var(--gap-x) / 2) 0;
+    }
+}
+
+
+.section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-position: 50% 50%;
+    background-size: cover;
+
+    // отступы между секциями без фона схлопываются
+    &:not([class*="bg-"]) + &:not([class*="bg-"]),
+    *:not(.section) + & {
+        padding-top: 0;
+    }
+
+    &__header {
+        margin-bottom: var(--section-header-margin);
+
+        a {
+            display: inline-flex;
+            margin-top: 0.5rem;
+
+            &:hover {
+                color: var(--color-primary);
+            }
+
+            svg {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    &__title {
+        margin: 0;
+    }
+}
+
+*:not(.section) + .section {
+    padding-top: 0;
+}
+
+
+.vstack {
+    --stack-gap: 1rem;
+    display: grid; 
+    gap: var(--stack-gap);
+}
+
+
+.columns {
+    display: grid;
+    gap: var(--grid-gap);
+
+    @media (min-width: 992px) {
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+}

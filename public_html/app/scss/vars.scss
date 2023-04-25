@@ -1,0 +1,57 @@
+/* 
+ * Colors
+ */
+$colors: (
+    "primary": #0969da,
+    "text": #24292f,
+    "bg": #ffffff,
+    "bg-light": #f6f8fa,
+    "text-muted": #6e7781,
+    "border": #d0d7de,
+    "success": #1a7f37,
+    "danger": #cf222e
+);
+
+
+/*
+ * Typography and other
+ */
+:root {
+    --font-family: "Roboto", sans-serif;
+    --font-weight: 300;
+    --font-weight-bolder: 400;
+    --font-weight-bold: 500;
+    // --font-title-family: "Montserrat", sans-serif;
+    // --font-title-weight: 600;
+
+    --section-padding: 8rem;
+    --section-header-margin: 2.25rem;
+    --grid-gap: 0.75rem;
+    --border-radius: 8px;
+    --shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+    --input-height: 2.5rem;
+
+    @media (min-width: 1200px) {
+        --grid-gap: 2rem;
+    }
+}
+
+
+/*
+ * Containers
+ */
+$breakpoints: (
+    (sm,  576px,  516px),
+    (md,  768px,  696px),
+    (lg,  992px,  936px),
+    (xl,  1200px, 1116px),
+    (xxl, 1400px, 1296px)
+);
+
+
+:root {
+    @each $name, $val in $colors {
+        --color-#{$name}: #{$val};
+        --color-#{$name}-rgb: #{toRGB($val)};
+    }
+}

@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '74807ee97962589d0f533c8a3f29ba44',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'ade5aeede18b0a280cf0c26ad277091e',
+  'native_key' => 'ms2_vanila_js',
+  'object' => '{"key":"ms2_vanila_js","value":"[[+jsUrl]]web\\/vanilajs\\/default.js","xtype":"textfield","namespace":"minishop2","area":"ms2_frontend","editedon":"2023-03-31 10:37:14"}',
+);

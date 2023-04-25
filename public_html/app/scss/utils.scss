@@ -1,0 +1,57 @@
+@function toRGB($color) {
+    @return + red($color) + ", " + green($color) + ", " + blue($color);
+}
+
+
+/*
+ * Default grid
+ */
+%grid {
+    --columns: 2;
+
+    @media (min-width: 768px) {
+        --columns: 3;
+    }
+
+    @media (min-width: 992px) {
+        --columns: 4;
+    }
+
+    @media (min-width: 1200px) {
+        --columns: 4;
+    }
+}
+
+
+/*
+ * Loading
+ */
+%is-loading {
+    position: relative;
+
+    &::after {
+        @extend %spinner-border;
+        font-size: 3rem;
+    }
+}
+
+%spinner-border {
+    content: '';
+    z-index: 101;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: 1s linear infinite spinner-border;
+}
+
+@keyframes spinner-border {
+    to { transform: rotate(360deg) }
+}

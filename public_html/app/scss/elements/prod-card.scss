@@ -1,0 +1,133 @@
+.prod-card {
+    @extend .card;
+    display: flex;
+    flex-direction: column;
+
+    &__body {
+        @extend .card__body;
+        display: grid;
+        flex-grow: 2;
+    }
+
+    &__title {
+        @extend .card__title;
+    }
+
+    &__badges {
+        position: absolute;
+        top: var(--card-gap);
+        left: var(--card-gap);
+    }
+}
+
+.prod-card__title {
+    margin-bottom: auto;
+    transition: all 0.2s;
+}
+
+.prod-card__price {
+    padding-top: 0.25rem;
+    margin-top: auto;
+}
+
+a:hover ~ .prod-card__title  {
+    color: var(--color-primary);
+}
+
+.prod-card__badges {
+    position: absolute;
+    top: var(--card-gap);
+    left: var(--card-gap);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.prod-card__favorite {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    height: 2rem;
+    width: 2rem;
+    background-color: #fff;
+    border-radius: 50%;
+
+    &:hover {
+        color: var(--color-danger);
+    }
+
+    input {
+        display: none;
+    }
+
+    svg {
+        position: absolute;
+        margin-bottom: -2px;
+        transition: all 0.2s;
+    }
+
+    svg:last-of-type {
+        opacity: 0;
+    }
+
+    :checked ~ svg:last-of-type {
+        opacity: 1;
+        color: var(--color-danger);
+    }
+}
+
+
+.prod-card__price-val {
+    font-size: 1.5rem;
+}
+
+.prod-card__footer {
+    padding: 0 var(--card-gap) var(--card-gap);
+}
+
+
+/* Карусель */
+.prod-card__gallery {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    text-align: center;
+    overflow: hidden;
+
+    .carousel {
+        margin-bottom: 1px !important;
+    }
+
+    .carousel__dots {
+        position: absolute;
+        display: flex !important;
+        top: 100%;
+        padding: 0 var(--card-gap);
+    }
+
+    .carousel__dot {
+        flex-grow: 1;
+        height: 1px;
+        color: var(--color-text);
+
+        &:not(.is-selected) {
+            color: var(--color-border);
+        }
+
+        &::after {
+            position: static;
+            display: block;
+            width: 100%;
+            height: 1px;
+            border-radius: 0;
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    a:hover,
+    a:hover ~ a {
+        color: var(--color-primary);
+    }
+}

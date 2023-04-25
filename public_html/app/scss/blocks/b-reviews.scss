@@ -1,0 +1,8 @@
+/* Отзывы */
+
+.b-reviews-items {
+    --columns: 1;
+    @media (min-width: 992px) {
+        --columns: 3;
+    }
+}

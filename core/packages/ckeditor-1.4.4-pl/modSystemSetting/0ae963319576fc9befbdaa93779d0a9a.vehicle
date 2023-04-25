@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'ckeditor',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '518fbe699d150bb00f208285ce2a572e',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '0ae963319576fc9befbdaa93779d0a9a',
+  'native_key' => 'ckeditor.format_tags',
+  'object' => '{"key":"ckeditor.format_tags","value":"p;h1;h2;h3;h4;h5;h6;pre;address;div","xtype":"textfield","namespace":"ckeditor","area":"general","editedon":null}',
+);

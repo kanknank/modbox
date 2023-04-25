@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'ckeditor',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f53d990f5873a7d2d5d02fc6033d5169',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '3feff217440099a840a0d40de884aeb9',
+  'native_key' => 'ckeditor.toolbar',
+  'object' => '{"key":"ckeditor.toolbar","value":"","xtype":"textarea","namespace":"ckeditor","area":"general","editedon":null}',
+);

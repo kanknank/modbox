@@ -1,0 +1,17 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => true,
+  'namespace' => 'counters',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '6de8d14caa409b55c3a130bc15411222',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => 'e61bd6ac13f3ccf00f4398e2019c9862',
+  'native_key' => 'counters',
+  'object' => '{"text":"counters","parent":"components","action":"home","description":"counters_menu_desc","icon":"","menuindex":0,"params":"","handler":"","permissions":"","namespace":"counters"}',
+);

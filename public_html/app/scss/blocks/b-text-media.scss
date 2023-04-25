@@ -1,0 +1,18 @@
+.b-text-media {
+    &__columns {
+        display: grid;
+        align-items: center;
+        column-gap: 4rem;
+        row-gap: 2rem;
+
+        @media (min-width: 992px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__media {
+        img {
+            border-radius: var(--border-radius);
+        }
+    }
+}

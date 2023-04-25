@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'ckeditor',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'a0cac0763ecafef2ecb7511faa9ebb03',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '6ab0acb0917b28c6368973aa12800a22',
+  'native_key' => 'ckeditor.resource_editor_height',
+  'object' => '{"key":"ckeditor.resource_editor_height","value":"600","xtype":"textfield","namespace":"ckeditor","area":"general","editedon":null}',
+);

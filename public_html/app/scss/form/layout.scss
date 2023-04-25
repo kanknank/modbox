@@ -1,0 +1,48 @@
+.box,
+.form._box {
+    padding: 2rem 2rem 2rem;
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    box-shadow: var(--shadow);
+}
+
+.form {
+    display: grid;
+    gap: 1rem;
+    
+    &._box,
+    &._modal {
+        > * {
+            width: 100%;
+            max-width: 452px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    &._maw {
+        max-width: 696px; // 3/4 контейнера
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__title {
+        margin-bottom: 0.5rem;
+    }
+
+    &__footer {
+        margin-top: 1rem;
+    }
+}
+
+.form-privacy,
+.form__privacy {
+    color: rgb(var(--color-rgb, var(--color-text-muted-rgb)));
+    font-size: 0.875rem;
+    line-height: 1.35;
+    
+    a {
+        color: inherit;
+        border-bottom: 1px solid rgba(var(--color-rgb, var(--color-text-muted-rgb)), 0.4);
+    }
+}

@@ -1,0 +1,125 @@
+.pg-cart {
+    &__columns {
+        display: grid;
+        gap: 2rem;
+        
+        @media (min-width: 1200px) {
+            align-items: start;
+            gap: 4rem;
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        //grid-template-rows: auto 1fr auto;
+        align-items: start;
+        gap: 0.75rem;
+        padding: 0.75rem 0;
+        border-top: 1px solid var(--color-border);
+        line-height: 1.35;
+
+        @media (min-width: 992px) {
+            grid-template-columns: 80px 1fr 9ch 120px 9ch auto;
+            grid-template-rows: auto;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        &-image {
+            @media (max-width: 991px) {
+                grid-area: #{"1 / 1 / 5 / 2"};
+            }
+        }
+
+        &-title {
+            // @media (max-width: 991px) {
+            //     grid-area: #{"1 / 2 / 2 / 3"};
+            // }
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+
+        &-prices {
+            text-align: right;
+
+            @media (max-width: 991px) {
+                text-align: left;
+            }
+        }
+
+        &-price-old {
+            font-size: 0.875rem;
+        }
+
+        &-qty {
+            @media (max-width: 991px) {
+                max-width: 120px;
+                margin: -0.5rem 0 -0.5rem -0.75rem;
+            }
+        } 
+
+        &-sum {
+            text-align: right;
+            font-size: 1.125rem;
+
+            @media (max-width: 991px) {
+                text-align: left;
+            }
+        }
+
+        &-remove {
+            @media (max-width: 991px) {
+                display: none;
+            }
+
+            button {
+                color: #C1C7D0;
+
+                &:hover {
+                    color: var(--color-danger);
+                }
+            }
+        }
+    }
+
+    &__result {
+        padding: 1.5rem;
+        border-radius: 16px;
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow);
+
+        &-header {
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        &-title {
+            margin-bottom: 0.25rem;
+        }
+
+        &-row {
+            display: grid;
+            gap: 1rem;
+            padding: 1.25rem 0 1.25rem;
+
+            @media (min-width: 576px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        &-text {
+            margin-right: 3rem;
+            font-size: 0.75rem;
+        }
+
+        &-sum {
+            font-size: 2rem;
+        }
+    }
+}

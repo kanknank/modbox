@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'ckeditor',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4aecbbf1a13fa575389fbacf978dc331',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '5a8966c8913c9ef3bd8b1abf078b2012',
+  'native_key' => 'ckeditor.remove_plugins',
+  'object' => '{"key":"ckeditor.remove_plugins","value":"forms,smiley,autogrow,liststyle,justify,pagebreak,colorbutton,indentblock,font,newpage,print,save,language,bidi,selectall,preview","xtype":"textfield","namespace":"ckeditor","area":"general","editedon":null}',
+);

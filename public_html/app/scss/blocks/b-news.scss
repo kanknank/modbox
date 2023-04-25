@@ -1,0 +1,8 @@
+/* Новости */
+/* Стили для карточки новости в elements/card */
+
+.b-news-items {
+    @media (max-width: 575px) {
+        --columns: 1;
+    }
+}

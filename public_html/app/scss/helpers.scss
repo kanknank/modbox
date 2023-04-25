@@ -1,0 +1,46 @@
+.font-bolder {
+    font-weight: var(--font-weight-bolder);
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-light {
+    background-color: var(--color-bg-light) !important;
+}
+
+.bg-success {
+    background-color: var(--color-success) !important;
+}
+
+.bg-danger {
+    background-color: var(--color-danger) !important;
+}
+
+
+.color-text {
+    --color-rgb: var(--color-text-rgb);
+    color: rgb(var(--color-rgb));
+}
+
+.color-muted,
+.color-text-muted {
+    --color-rgb: var(--color-text-muted-rgb);
+    color: rgb(var(--color-rgb));
+}
+
+.color-white {
+    --color-rgb: 255, 255, 255;
+    color: rgb(var(--color-rgb));
+}
+
+
+.is-rounded {
+    border-radius: var(--border-radius);
+}

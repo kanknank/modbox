@@ -1,0 +1,12 @@
+.pg-news__items {
+    --columns: 1;
+    --grid-gap: 2rem;
+
+    @media (min-width: 576px) {
+        --columns: 2;
+    }
+
+    @media (min-width: 992px) {
+        --columns: 3;
+    }
+}

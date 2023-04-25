@@ -1,0 +1,21 @@
+.b-brands {
+    --section-padding: 6rem;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item {
+        margin: 0 1rem;
+
+        @media (min-width: 1200px) {
+            margin: 0 4.5rem;
+        }
+    }
+}
+
+
+
+

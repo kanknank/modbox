@@ -1,0 +1,139 @@
+.input {
+    width: 100%;
+    height: var(--input-height, 38px);
+    padding: 0 20px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    transition: box-shadow 0.2s, border-color 0.2s, background-color 0.2s;
+    //background-color: var(--color-bg-light);
+    .fancybox__content & {
+        outline: none !important;
+    }
+    &:focus:not([readonly]) {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.2);
+        background-color: #fff;
+    }
+    &.error,
+    .field-error:not(:empty) ~ &,
+    .show-validation &:invalid {
+        border-color: var(--color-danger);
+        &:focus {
+            box-shadow: 0 0 0 4px rgba(var(--color-danger-rgb), 0.2);
+        }
+    }
+    &[readonly] {
+        pointer-events: none;
+        color: var(--color-text-muted);
+    }
+}
+
+::placeholder {
+    color: var(--color-text-muted);
+}
+
+
+.field {
+    --input-height: 3.25rem;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    line-height: 1.2;
+}
+.field .input {
+    padding-top: 1.125rem;
+    background-color: var(--color-bg-light);
+}
+.field textarea.input {
+    padding-top: 25px;
+}
+.field-label {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: var(--input-height);
+    display: flex;
+    align-items: center;
+    color: var(--color-text-muted);
+    pointer-events: none;
+    transition: all .2s;
+    transform-origin: left;
+}
+:required ~ .field-label::after {
+    content: '*';
+    margin-left: 0.1em;
+}
+
+.show-validation :invalid ~ .field-label::after {
+    color: var(--color-danger);
+}
+
+:not(select):focus ~ .field-label,
+.input:not(select):not(:placeholder-shown) ~ .field-label,
+.is-selected ~ .field-label {
+    transform: translateY(-11px) scale(0.75);
+}
+
+
+// @todo под input, сделать field-button для пароля
+// @todo field-select - иконку псевдоэлементом
+.field-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 3.5rem;
+    height: var(--input-height);
+    background-color: rgba(0,0,0,0.03);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    select ~ & {
+        pointer-events: none;
+        background: none;
+        font-size: 1.25rem;
+    }
+    svg {
+        margin: auto;
+        width: 1em;
+    }
+}
+
+.field-error {
+    margin-top: 0.5rem;
+    color: var(--color-danger);
+    font-size: 0.75rem;
+    line-height: 1.2;
+    &:empty {
+        display: none;
+    }
+}
+
+
+textarea.input {
+    height: 96px;
+    padding-top: 12px;
+    resize: vertical;
+}
+
+
+.input[type="file"] {
+    padding-top: 0;
+}
+
+@mixin file-upload-button {
+    height: var(--input-height);
+    padding: 0 20px;
+    margin-left: -20px;
+    margin-right: 1rem;
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+    border: none;
+}
+.input::-webkit-file-upload-button {
+    @include file-upload-button;
+}
+.input::file-selector-button {
+    @include file-upload-button;
+}

@@ -1,0 +1,111 @@
+/* 
+ * Яндекс карты
+ */
+.ya-map {
+    height: 400px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    &.is-loading {
+        border: 1px solid var(--color-border);
+    }
+
+    &.is-loading::before {
+        background: var(--color-bg-light) !important;
+    }
+}
+
+
+/* 
+ * Alpine.js: скрываем элемент пока не загрузился
+ */
+[x-cloak] {
+    display: none;
+}
+
+
+/*
+ * Carousel
+ */
+.f-carousel:not(.is-horizontal) {
+    display: flex;
+    overflow: hidden;
+}
+
+.f-carousel_default {
+    @extend %grid;
+
+    --f-carousel-slide-width: calc(100% / var(--columns));
+    --f-carousel-slide-padding: calc(var(--grid-gap) / 2);
+    --f-button-bg: #fff;
+    --f-button-width: 48px;
+    --f-button-height: 48px;
+    --f-button-border-radius: 50%;
+    --f-button-svg-width: 27px;
+    --f-button-svg-height: 27px;
+    --f-button-svg-stroke-width: 1.5;
+    --f-button-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+        rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    --f-button-next-pos:  calc((var(--f-button-width) / -2) - (var(--grid-gap) / -2));
+    --f-button-prev-pos:  calc((var(--f-button-width) / -2) - (var(--grid-gap) / -2));
+
+    margin: calc(var(--grid-gap) / -2);
+    width: calc(100% + var(--grid-gap));
+
+    .f-button {
+        @media (max-width: 1199px) {
+            display: none;
+        }
+    }
+
+    .f-button[disabled] {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .f-carousel__dots {
+        @media (min-width: 1200px) {
+            display: none;
+        }
+    }
+}
+
+
+/*
+ * Fancybox
+ */
+.fancybox__container:not(.has-toolbar) {
+    --fancybox-bg: rgba(255,255,255,.6);
+    --fancybox-color: var(--color-text);
+    --f-spinner-color-1: rgba(0, 0, 0, 0.1);
+    --f-spinner-color-2: rgba(17, 24, 28, 0.8);
+    
+    .fancybox__backdrop {
+        backdrop-filter: blur(8px);
+    }
+
+    .fancybox__content {
+        width: 696px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+    }
+}
+
+a[data-fancybox] img {
+    cursor: zoom-in;
+}
+
+
+/* 
+ * htmx + индикатор загрузки
+ */
+.htmx-swapping,
+.is-loading {
+    @extend %is-loading;
+
+    > * {
+        opacity: 0.2;
+        pointer-events: none !important;
+    }
+}

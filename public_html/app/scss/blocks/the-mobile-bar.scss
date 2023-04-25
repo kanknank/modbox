@@ -1,0 +1,49 @@
+.mobile-bar {
+    position: sticky;
+    z-index: 100;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid var(--color-border);
+    backdrop-filter: blur(8px);
+
+    @media (min-width: 1200px) {
+        display: none;
+    }
+
+    &__row {
+        display: flex;
+    }
+
+    &__item {
+        flex: 1;
+    }
+
+    a,
+    button {
+        display: flex;
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+        color: inherit;
+        border-bottom: none;
+        font-size: 0.75rem;
+    }
+
+    &__count {
+        position: absolute;
+        top: 0.1rem;
+        right: calc(50% - 1.5rem);
+        padding: 0.25em 0.25em;
+        min-width: 1.25rem;
+        background: var(--color-primary);
+        border: 1px solid #fff;
+        border-radius: 99px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        line-height: 1;
+    }
+}

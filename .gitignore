@@ -1,0 +1,9 @@
+/core/cache
+/core/config/config.inc.php
+/public_html/assets/_cache
+/public_html/cgi-bin
+/html
+
+/_docker/config/*
+/_docker/data/*
+/_docker/logs/*

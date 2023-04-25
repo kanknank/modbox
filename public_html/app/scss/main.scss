@@ -1,0 +1,111 @@
+
+
+a, button, .button {
+    transition: all .2s;
+}
+
+
+
+a:not([class]),
+.link {
+    //border-bottom: 1px solid rgba(var(--color-rgb, var(--color-primary-rgb)), 0.4);
+    border-bottom: 1px solid transparent;
+    color: rgb(var(--color-rgb, var(--color-primary-rgb)));
+    &:hover {
+        border-bottom-color: currentColor;
+    }
+}
+
+
+.pagetitle {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+
+.is-dark {
+    color: #fff;
+    background: var(--color-text);
+    color-scheme: dark;
+}
+
+
+// .spoiler {
+//     & + & {
+//         margin-top: 1rem;
+//     }
+// }
+
+.spoiler {
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    & + & {
+        margin-top: -1px;
+    }
+}
+.spoiler-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 0;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+        color: var(--color-primary);
+    }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: currentColor;
+        font-size: 1rem;
+    }
+    &::before {
+        right: 0;
+        width: 1rem;
+        height: 1px;
+    }
+    &::after {
+        right: calc((1em - 1px) / 2);
+        width: 1px;
+        height: 1rem;
+    }
+    .is-open &::after {
+        display: none;
+    }
+}
+
+.spoiler-content {
+    max-height: 0;
+    border-top: 1px solid var(--color-border);
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.2s;
+    .spoiler.is-open & {
+        max-height: calc(var(--max-height) + 2.5rem);
+        padding: 1.25rem 0;
+        opacity: 1;
+    }
+}
+
+
+#quick-edit {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--color-border, #ccc);;
+    z-index: 900;
+    background: var(--color-bg-light, #eee);
+    color: #000;
+}
+#quick-edit svg {
+    margin: auto;
+}
+@media screen and (max-width: 1199px) {
+    #quick-edit {
+        display: none;
+    }
+}

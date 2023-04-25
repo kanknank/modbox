@@ -1,0 +1,19 @@
+.news-card {
+    &__date {
+        margin-top: 1rem;
+    }
+
+    &__title {
+        margin: 1rem 0 1rem;
+        line-height: 1.35;
+        transition: all 0.2s;
+
+        @media (min-width: 1200px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    &:hover &__title {
+        color: var(--color-primary);
+    }
+}

@@ -1,0 +1,11 @@
+.message {
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    color: #fff;
+    &.is-danger {
+        background: var(--color-danger);
+    }
+    &.is-success {
+        background: var(--color-success);
+    }
+}

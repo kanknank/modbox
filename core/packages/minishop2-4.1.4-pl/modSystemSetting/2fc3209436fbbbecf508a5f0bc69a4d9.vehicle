@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'minishop2',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '929637c657276ca2d97b2aa9eb66177f',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '2fc3209436fbbbecf508a5f0bc69a4d9',
+  'native_key' => 'ms2_notify_js_class_name',
+  'object' => '{"key":"ms2_notify_js_class_name","value":"MsIziToast","xtype":"textfield","namespace":"minishop2","area":"ms2_frontend","editedon":"2023-03-31 10:37:14"}',
+);

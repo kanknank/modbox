@@ -1,0 +1,57 @@
+.pg-checkout {
+    &__columns {
+        @media (min-width: 992px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: 1400px) {
+            grid-template-columns: 1fr 2fr;
+        }
+    }
+
+    &__form {
+        display: grid;
+        gap: 1rem;
+    }
+
+    &__delivery {
+        margin-top: 0.75rem;
+    }
+
+    &__total-row {
+        display: grid;
+        gap: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+
+        @media (min-width: 576px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-text {
+            max-width: 260px;
+        }
+
+        &-count {
+            white-space: nowrap;
+            
+            @media (min-width: 576px) {
+                text-align: right;
+
+            }
+        }
+
+        &-sum {
+            font-size: 1.5rem;
+            line-height: 1.2;
+
+            @media (min-width: 576px) {
+                text-align: right;
+
+            }
+        }
+    }
+}
